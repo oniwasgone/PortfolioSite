@@ -197,22 +197,31 @@
                         Engineering requires the right tools for the job. I combine low-level understanding with modern
                         frameworks to build robust architectures.
                     </p>
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group image-reveal">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] image-reveal">
                         <!-- Abstract coding background -->
-                        <div
-                            class="w-full h-full bg-gray-900 flex items-center justify-center text-blue-400 font-mono text-xs overflow-hidden absolute inset-0 transform group-hover:scale-110 transition duration-1000 ease-out p-8 leading-loose opacity-80">
-                            def diffie_hellman(p, g, a, b):<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;A = (g ** a) % p<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;B = (g ** b) % p<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;secret_A = (B ** a) % p<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;secret_B = (A ** b) % p<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;assert secret_A == secret_B<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;return secret_A<br />
-                            <br />
-                            // Initializing Postgres Connection pool<br />
-                            pool, err := pgxpool.Connect(context.Background(), dbUrl)
-                        </div>
-                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500">
+                        <pre
+                            class="w-full h-full bg-gray-900 text-blue-400 font-mono text-[11px] sm:text-xs overflow-hidden absolute inset-0 p-6 sm:p-8 leading-relaxed opacity-80 whitespace-pre m-0"><span class="text-gray-500">// Convolution Engine</span>
+void convolve(const Image *src, Image *dst,
+              const Kernel *k) {
+  int R = k-&gt;size / 2;
+  for (int y = 0; y &lt; src-&gt;h; ++y) {
+    for (int x = 0; x &lt; src-&gt;w; ++x) {
+      int acc = 0, idx = 0;
+      for (int dy = -R; dy &lt;= R; ++dy)
+        for (int dx = -R; dx &lt;= R; ++dx)
+          acc += src-&gt;data[clamp(y+dy) * src-&gt;w
+               + clamp(x+dx)] * k-&gt;w[idx++];
+      dst-&gt;data[y*dst-&gt;w + x]
+        = clamp_u8(acc / k-&gt;norm + k-&gt;bias);
+    }
+  }
+}
+<span class="text-gray-500">// Filter chaining pipeline</span>
+convolve(&amp;img, &amp;buf, get_kernel(sel.f1));
+if (sel.chain)
+  convolve(&amp;buf, &amp;out, get_kernel(sel.f2));
+vga_draw_centered(&amp;out);</pre>
+                        <div class="absolute inset-0 bg-black/10">
                         </div>
                     </div>
                 </div>
@@ -229,14 +238,14 @@
                         <span
                             class="px-5 py-2.5 rounded-full bg-accent-yellow text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">Java</span>
                         <span
-                            class="px-5 py-2.5 rounded-full bg-white dark:bg-gray-700 dark:text-white text-black font-medium text-sm shadow-sm hover:-translate-y-1 transition duration-300 cursor-default">C
+                            class="px-5 py-2.5 rounded-full bg-[#c7d2fe] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">C
                             / C++</span>
                         <span
                             class="px-5 py-2.5 rounded-full bg-[#ffcbf2] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">Go</span>
                         <span
                             class="px-5 py-2.5 rounded-full bg-[#a5f3fc] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">PostgreSQL</span>
                         <span
-                            class="px-5 py-2.5 rounded-full bg-white dark:bg-gray-700 dark:text-white text-black font-medium text-sm shadow-sm hover:-translate-y-1 transition duration-300 cursor-default">Haskell</span>
+                            class="px-5 py-2.5 rounded-full bg-[#e9d5ff] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">Haskell</span>
                         <span
                             class="px-5 py-2.5 rounded-full bg-[#fed7aa] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">Assembly</span>
                     </div>
@@ -244,16 +253,15 @@
                     <h3 class="font-bold text-xl mb-6 relative z-10 mt-4">Technologies</h3>
                     <div class="flex flex-wrap gap-3 relative z-10 tag-stagger">
                         <span
-                            class="px-5 py-2.5 rounded-full bg-white dark:bg-gray-700 dark:text-white text-black font-medium text-sm shadow-sm hover:-translate-y-1 transition duration-300 cursor-default">Docker</span>
-
+                            class="px-5 py-2.5 rounded-full bg-[#bae6fd] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">Docker</span>
                         <span
-                            class="px-5 py-2.5 rounded-full bg-white dark:bg-gray-700 dark:text-white text-black font-medium text-sm shadow-sm hover:-translate-y-1 transition duration-300 cursor-default">Spring</span>
+                            class="px-5 py-2.5 rounded-full bg-[#bbf7d0] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">Spring</span>
                         <span
-                            class="px-5 py-2.5 rounded-full bg-white dark:bg-gray-700 dark:text-white text-black font-medium text-sm shadow-sm hover:-translate-y-1 transition duration-300 cursor-default">Dash</span>
+                            class="px-5 py-2.5 rounded-full bg-[#fecdd3] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">Dash</span>
                         <span
                             class="px-5 py-2.5 rounded-full bg-[#d0f4de] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">GitHub</span>
                         <span
-                            class="px-5 py-2.5 rounded-full bg-white dark:bg-gray-700 dark:text-white text-black font-medium text-sm shadow-sm hover:-translate-y-1 transition duration-300 cursor-default">MATLAB</span>
+                            class="px-5 py-2.5 rounded-full bg-[#fde68a] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">MATLAB</span>
                     </div>
                 </div>
             </div>
@@ -497,23 +505,59 @@
             <div class="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-primary to-transparent z-10"></div>
             <div class="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-primary to-transparent z-10"></div>
 
-            <div class="ticker">
-                <span class="text-4xl font-display italic mx-8">Systems Optimization</span>
-                <span class="text-4xl mx-8 opacity-50">✦</span>
-                <span class="text-4xl font-display italic mx-8">Full Stack Engineering</span>
-                <span class="text-4xl mx-8 opacity-50">✦</span>
-                <span class="text-4xl font-display italic mx-8">Data Structures</span>
-                <span class="text-4xl mx-8 opacity-50">✦</span>
-                <span class="text-4xl font-display italic mx-8">Algorithms</span>
-                <span class="text-4xl mx-8 opacity-50">✦</span>
-                <span class="text-4xl font-display italic mx-8">Systems Optimization</span>
-                <span class="text-4xl mx-8 opacity-50">✦</span>
-                <span class="text-4xl font-display italic mx-8">Full Stack Engineering</span>
-                <span class="text-4xl mx-8 opacity-50">✦</span>
-                <span class="text-4xl font-display italic mx-8">Data Structures</span>
-                <span class="text-4xl mx-8 opacity-50">✦</span>
-                <span class="text-4xl font-display italic mx-8">Algorithms</span>
-                <span class="text-4xl mx-8 opacity-50">✦</span>
+            <div class="ticker-track">
+                <div class="ticker-content">
+                    <span class="text-4xl font-display italic mx-8">Systems Optimization</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Full Stack Engineering</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Data Structures</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Algorithms</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Systems Optimization</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Full Stack Engineering</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Data Structures</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Algorithms</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Systems Optimization</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Full Stack Engineering</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Data Structures</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Algorithms</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                </div>
+                <div class="ticker-content" aria-hidden="true">
+                    <span class="text-4xl font-display italic mx-8">Systems Optimization</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Full Stack Engineering</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Data Structures</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Algorithms</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Systems Optimization</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Full Stack Engineering</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Data Structures</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Algorithms</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Systems Optimization</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Full Stack Engineering</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Data Structures</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                    <span class="text-4xl font-display italic mx-8">Algorithms</span>
+                    <span class="text-4xl mx-8 opacity-50">✦</span>
+                </div>
             </div>
         </div>
     </section>
