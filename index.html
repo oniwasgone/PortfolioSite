@@ -174,9 +174,9 @@
                 <span class="material-symbols-outlined text-4xl opacity-50">school</span>
             </div>
             <p class="text-lg leading-relaxed opacity-80 reveal-text">
-                With a 4.66/5 GPA, I specialize in OOP, Databases, Data Structures and Algorithms, Operating Systems,
-                and Functional Programming. I'm passionate about low-level optimization as well as building high-level
-                scalable applications.
+                With a 4.69/5 GPA, my coursework spans Algorithms & Data Structures, Probability & Statistics,
+                Numerical Methods, Databases, and Functional Programming. I'm passionate about quantitative
+                engineering — from low-level optimization to scalable, data-driven applications.
             </p>
         </div>
         <div
@@ -259,9 +259,15 @@ vga_draw_centered(&amp;out);</pre>
                         <span
                             class="px-5 py-2.5 rounded-full bg-[#fecdd3] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">Dash</span>
                         <span
-                            class="px-5 py-2.5 rounded-full bg-[#d0f4de] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">GitHub</span>
+                            class="px-5 py-2.5 rounded-full bg-[#d0f4de] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">Git / GitHub</span>
                         <span
                             class="px-5 py-2.5 rounded-full bg-[#fde68a] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">MATLAB</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full bg-[#c4b5fd] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">NumPy / Pandas</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full bg-[#fbcfe8] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">Matplotlib</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full bg-[#99f6e4] text-black font-medium text-sm hover:-translate-y-1 transition duration-300 shadow-sm cursor-default">async I/O</span>
                     </div>
                 </div>
             </div>
@@ -357,10 +363,7 @@ vga_draw_centered(&amp;out);</pre>
                                 <h3
                                     class="text-2xl font-display mb-3 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition">
                                     Algorithmic Trading Bot</h3>
-                                <p class="text-gray-600 dark:text-gray-400 mb-6">Engineered a live trend-following
-                                    trading bot in Python to execute automated market orders for the SPY ETF via the
-                                    Alpaca API. Integrated SMA crossovers, ADX filtering and ATR-based volatility exits
-                                    to manage risk and identify optimal trade entries.</p>
+                                <p class="text-gray-600 dark:text-gray-400 mb-6">Built a live paper-trading bot combining SMA (20/130) crossovers, an ADX > 25 regime filter, and 2×ATR stops. Backtested on 21 years of SPY daily bars: halved annualised volatility (9.5% vs 19.2%) and cut max drawdown from −55% to −27%, with a 66.7% win rate across 138 trades.</p>
                             </div>
                             <div class="flex gap-2 flex-wrap mt-auto">
                                 <span
@@ -422,10 +425,8 @@ vga_draw_centered(&amp;out);</pre>
                             <div class="flex-grow">
                                 <h3
                                     class="text-2xl font-display mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition">
-                                    Local Database Simulation</h3>
-                                <p class="text-gray-600 dark:text-gray-400 mb-6">Utilized PostgreSQL and Docker to
-                                    simulate a social media platform and scaled it up with large inserts and injection
-                                    security.</p>
+                                    Scalable Social-Graph Database</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-6">Designed a normalised PostgreSQL schema modelling a social media platform, containerised with Docker, and stress-tested with bulk inserts while parameterizing queries hardened against SQL injection.</p>
                             </div>
                             <div class="flex gap-2 flex-wrap mt-auto">
                                 <span
@@ -492,6 +493,34 @@ vga_draw_centered(&amp;out);</pre>
                                     class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium">Cryptography</span>
                                 <span
                                     class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium">Security</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: Monte Carlo Options Pricer -->
+                    <div class="swiper-slide w-[85%] sm:w-[65%] md:w-[50%] lg:w-[45%] xl:w-[40%] flex-shrink-0 h-auto">
+                        <div
+                            class="group bg-white dark:bg-gray-800 rounded-3xl p-6 transition-all duration-500 hover:shadow-2xl border border-transparent hover:border-gray-200 dark:hover:border-gray-700 project-card flex flex-col h-full">
+                            <div class="flex justify-between items-start mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 dark:text-amber-400">
+                                    <span class="material-symbols-outlined">casino</span>
+                                </div>
+                                <span class="text-xs font-mono text-gray-500">2026</span>
+                            </div>
+                            <div class="flex-grow">
+                                <h3
+                                    class="text-2xl font-display mb-3 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition">
+                                    Monte Carlo Options Pricer</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-6">Priced European and Asian options via Monte Carlo simulation of geometric Brownian motion. Validated against closed-form Black-Scholes to within 0.1%. Added antithetic and control variates, cutting estimator standard error by 62%.</p>
+                            </div>
+                            <div class="flex gap-2 flex-wrap mt-auto">
+                                <span
+                                    class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium">Python</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium">NumPy</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium">Quantitative Finance</span>
                             </div>
                         </div>
                     </div>
@@ -571,21 +600,9 @@ vga_draw_centered(&amp;out);</pre>
                     class="p-8 border border-gray-300 dark:border-gray-700 rounded-3xl bg-transparent relative hover:bg-white dark:hover:bg-gray-800 transition duration-500 hover:shadow-xl group mt-0 md:mt-8 h-full flex flex-col justify-between">
                     <span
                         class="material-symbols-outlined text-4xl text-gray-400 dark:text-gray-500 mb-4 group-hover:text-blue-500 transition">work_history</span>
-                    <h4 class="text-xl font-bold mb-2">Financial Advisor</h4>
-                    <p class="text-sm font-medium opacity-60 mb-4">Konglig Datasektion KTH • Jul - Oct 2025</p>
-                    <p class="text-base text-gray-700 dark:text-gray-300">Managed financial oversight, budget
-                        allocation, and authorized large-scale event proposals for a student chapter with 80+ active
-                        members.</p>
-                </div>
-
-                <div
-                    class="p-8 border border-gray-300 dark:border-gray-700 rounded-3xl bg-transparent relative hover:bg-white dark:hover:bg-gray-800 transition duration-500 hover:shadow-xl group mt-0 md:mt-8 h-full flex flex-col justify-between">
-                    <span
-                        class="material-symbols-outlined text-4xl text-gray-400 dark:text-gray-500 mb-4 group-hover:text-purple-500 transition">verified</span>
-                    <h4 class="text-xl font-bold mb-2">Computer & Peripheral Hardware</h4>
-                    <p class="text-sm font-medium opacity-60 mb-4">Coursera & Illinois Tech • 2024</p>
-                    <p class="text-base text-gray-700 dark:text-gray-300">Certified understanding of computer
-                        architecture, components, and hardware interaction principles.</p>
+                    <h4 class="text-xl font-bold mb-2">Reception Finance Committee</h4>
+                    <p class="text-sm font-medium opacity-60 mb-4">Konglig Datasektionen, KTH • Jul – Oct 2025</p>
+                    <p class="text-base text-gray-700 dark:text-gray-300">One of 8 members on the finance committee for the 2025 CS intake (~250 freshers). Owned budget approval for party and social events; reviewed expenditure proposals against allocation.</p>
                 </div>
 
                 <div
@@ -593,9 +610,19 @@ vga_draw_centered(&amp;out);</pre>
                     <span
                         class="material-symbols-outlined text-4xl text-gray-400 dark:text-gray-500 mb-4 group-hover:text-orange-500 transition">verified</span>
                     <h4 class="text-xl font-bold mb-2">McKinsey Forward</h4>
-                    <p class="text-sm font-medium opacity-60 mb-4">McKinsey & Company • 2025</p>
+                    <p class="text-sm font-medium opacity-60 mb-4">McKinsey & Company • Aug 2025</p>
                     <p class="text-base text-gray-700 dark:text-gray-300">Earned the Forward Badge, demonstrating
                         business acumen, strategic thinking, and leadership readiness.</p>
+                </div>
+
+                <div
+                    class="p-8 border border-gray-300 dark:border-gray-700 rounded-3xl bg-transparent relative hover:bg-white dark:hover:bg-gray-800 transition duration-500 hover:shadow-xl group mt-0 md:mt-8 h-full flex flex-col justify-between">
+                    <span
+                        class="material-symbols-outlined text-4xl text-gray-400 dark:text-gray-500 mb-4 group-hover:text-purple-500 transition">verified</span>
+                    <h4 class="text-xl font-bold mb-2">MIT 18.650 Statistics for Applications</h4>
+                    <p class="text-sm font-medium opacity-60 mb-4">MIT OpenCourseWare • Apr 2026</p>
+                    <p class="text-base text-gray-700 dark:text-gray-300">Self-studied MIT's graduate-level statistics
+                        course covering maximum likelihood estimation, hypothesis testing, regression, and Bayesian inference.</p>
                 </div>
             </div>
         </div>
